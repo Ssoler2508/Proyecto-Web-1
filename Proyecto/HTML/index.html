@@ -3,88 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="../materialize/css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type= "text/javascript" src="./js/materialize.min.js"></script>
-    <script type= "text/javascript" src="../js/inde.js"></script>
-    <script type= "text/javascript" src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
+    <script href="../js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="./js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/inde.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header>        
         <nav>
-            <div class="nav-wrapper">
-              <a href="#!" class="brand-logo"></a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="sass.html">Cucigrama</a></li>
-                <li><a href="badges.html"></a></li>
-                <li><a href="collapsible.html"></a></li>
-                <li><a href="mobile.html">Ingresar</a></li>
-              </ul>
+            <div class="nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+                <h1>Sitio de Revistas</h1>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Crucigrama</a></li>
+                    <li><a href="../HTML/inicio.html#revistas" target="_blank">Revistas</a></li>
+                    <li><a href="../HTML/inicio.html#contacto" target="_blank">Contacto</a></li>
+                    <li><a href="../HTML/index.html" target="_self">Ingresar</a></li>
+                </ul>
             </div>
         </nav>
-        
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Crucigrama</a></li>
-            <li><a href="badges.html"></a></li>
-            <li><a href="collapsible.html"></a></li>
-            <li><a href="mobile.html">Ingresar</a></li>
-        </ul>
-                   
-
     </header>
     <main>
         <div class="main-div" >
             <div class="form" >
-                <div class="container">
-                    <h2>Registro</h2>
+                <div class="container purple lighten-5 z-depth-3">
+                    <h2 class="center-align purple-text text-darken-3">Registro</h2>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">account_box</i>
-                        <input id="icon_prefix" type="text" class="validate">
-                        <label for="icon_prefix">cedula</label>
+                        <input id="icon_prefix" type="text" class="validate" placeholder=" " required onblur="validarCedula()">
+                        <label for="icon_prefix">Cedula</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">person</i>
-                        <input id="icon_nombre" type="text" class="validate" onblur="validarNombre()">
-                        <label for="icon_nombre">nombre</label>
+                        <input id="icon_nombre" type="text" class="validate" placeholder=" " required onblur="validarNombre()">
+                        <label for="icon_nombre">Nombre</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">perm_identity</i>
-                        <input id="perm_identity" type="text" class="validate">
+                        <input id="perm_identity" type="text" class="validate" placeholder=" " required onblur="validarApellido()">
                         <label for="perm_identity">Apellido</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" type="text" class="validate">
-                        <label for="email">email</label>
+                        <input id="email" type="text" class="validate" placeholder=" " required onblur="validarEmail()">
+                        <label for="email">Email</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">accessibility</i>
-                        <input id="accessibility" type="text" class="validate">
-                        <label for="accessibility">nombre Usuario</label>
+                        <input id="accessibility" type="text" class="validate" placeholder=" " required>
+                        <label for="accessibility">Nombre de Usuario</label>
                     </div>
                     <div class="input-field col s6">
                         <i class="material-icons prefix">phonelink_lock</i>
-                        <input id="phonelink_lock" type="password" class="validate">
+                        <input id="phonelink_lock" type="password" class="validate" placeholder=" " required onblur="validarClave()">
                         <label for="phonelink_lock">Clave</label>
                     </div>
-                    <div class="input-field col s6">
-                        <i class="material-icons prefix">person</i>
-                        <input id="icon_nombre" type="date" class="validate">
-                        <label for="icon_nombre"></label>
+                    <div class="date_div input-field col s6">
+                        <i class="material-icons prefix">event</i>
+                        <input id="fecha_nacimiento" type="text" name="date" class="validate datepicker date" placeholder=" " required>
+                        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
                     </div>
-                    <div class="button" >
-                        <button class="btn waves-effect waves-light" id="button" type="submit" name="action">Ingresar
+                    <div class="button-container" >
+                        <button class="btn waves-effect waves-light" id="button" type="submit" name="action" onclick="guardarYLimpiarFormulario()">Ingresar
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
-               </div>
-                
-            </div>
-            
+               </div>   
+            </div>   
         </div>
     </main>
     <footer>

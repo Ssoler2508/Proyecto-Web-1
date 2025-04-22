@@ -1,0 +1,199 @@
+:root {
+    --primary-color: #936aba; /* Azul Materialize */
+    --secondary-color: #936aba; /* Verde Materialize */
+    --text-color: #333; /* Color de texto */
+    --background-color: #f4f4f4; /* Color de fondo */
+    --font-color: #fff; /* Color de fuente */
+}
+.error{
+    background-color: red;
+    border-bottom: 2px solid red; /* Borde rojo para indicar error */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+
+header {
+    color: var(--font-color);
+    /* padding: 10px 0; */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; 
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+header h2 {
+    margin: 0; 
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+header ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+.nav-wrapper {
+    background-color: var(--primary-color); /* Color de fondo del encabezado */
+}
+li a:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--primary-color);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    justify-content: center; /* Centra verticalmente los elementos dentro del contenedor */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+.card img {
+    display: block; /* Asegura que la imagen sea tratada como un bloque */
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+    max-width: 80%; /* Limita el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Opcional: bordes redondeados */
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: bold;
+}
+
+.card p {
+    margin: 0 15px 15px;
+    color: var(--font-color);
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 1.5;
+}
+.card a {
+    text-decoration: none; 
+    color: inherit;
+}
+img {
+    justify-content: center;
+    max-width: 80%;
+    border-radius: 5px;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.contact-section {
+    width: 70%; /* Ocupa el 70% del ancho del body */
+    margin: 40px auto; /* Centra horizontalmente y añade un margen superior/inferior */
+    background-color: var(--background-color); /* Fondo claro */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    text-align: center;
+}
+.form-field {
+    margin-bottom: 20px; /* Espacio entre los campos del formulario */
+}
+.form {
+    padding: 10px 80px 10px 80px; /* Espacio interno del formulario */
+}
+.input-field {
+    position: relative;
+}
+
+.input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.1rem;
+    color: var(--secondary-color); /* Usa el color secundario */
+    transition: all 0.3s ease; /* Transición suave */
+    pointer-events: none; /* Evita que el label interfiera con el clic */
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label,
+.input-field input:not(:placeholder-shown) + label,
+.input-field textarea:not(:placeholder-shown) + label {
+    top: -20px; /* Mueve el label hacia arriba */
+    font-size: 0.8rem; /* Reduce el tamaño del label */
+    color: var(--primary-color); /* Cambia el color del label */
+}
+.button-container {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente el botón */
+    margin-top: 20px; /* Espacio superior */
+}
+.contact-section button {
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: var(--primary-color); /* Fondo morado oscuro */
+    color: var(--font-color); /* Texto blanco */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: flex; /* Activa Flexbox */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Asegura que el texto esté centrado */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+.contact-section button:hover {
+    background-color: var(--secondary-color); /* Fondo lila claro al pasar el mouse */
+    transform: scale(1.15); /* Aumenta ligeramente el tamaño */
+}
+
+/* Sobrescribe el estilo de los inputs válidos */
+input.valid,
+textarea.valid {
+    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
+    box-shadow: none; /* Elimina la sombra verde */
+}
+
+/* Sobrescribe el estilo de los inputs inválidos */
+input.invalid,
+textarea.invalid {
+    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
+    box-shadow: none; /* Elimina la sombra roja */
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
