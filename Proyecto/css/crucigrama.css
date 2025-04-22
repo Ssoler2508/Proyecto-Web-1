@@ -1,0 +1,36 @@
+
+.cols12m7{
+    height: 520px;
+    width: 520px;
+    margin-left: 450px;
+    padding: 25px;
+    flex-wrap: wrap; 
+    gap: 5px; 
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+body{
+    background-color: black;
+}
+.card{
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;  
+    padding: 20px;
+    box-shadow: 50px 50px 50px rgba(189, 42, 42, 0.1);
+    background-color: black;
+}
+.nav-wrapper{
+    background-color: black;
+}
+.card-action{
+    padding: 1px;
+    margin-left: 125px;
+    justify-content: center;
+}
+h3{
+    color: w;
+}
+.nav-wrapper{
+    background-color: rgb(0, 0, 0);
+}

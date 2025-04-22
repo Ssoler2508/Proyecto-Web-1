@@ -1,0 +1,42 @@
+.nav-wrapper{
+    background-color: rgb(0, 0, 0);
+    
+}
+.btnwaves-effectwaves-light{
+    background-color: black;
+}
+#button{
+    background-color: black;
+}
+body{
+    text-align: center;
+    background-color: rgb(232, 229, 229);
+}
+.main-div{
+    align-items: center;
+}
+.form{
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;  
+    padding: 20px;
+    border-radius: 20px;
+}
+.container{
+    flex-wrap: wrap; 
+    gap: 5px; 
+    margin-bottom: 20px;
+    border: 2px solid black;
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+footer{
+    background-color: black;
+    padding: 25px;
+}
+footer p{
+    color: white;
+}
+.error{
+    background-color: red;
+}
