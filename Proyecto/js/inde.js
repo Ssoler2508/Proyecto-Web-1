@@ -5,13 +5,37 @@ $(document).ready(function () {
     // Llama a la función para guardar los valores en localStorage
     guardarInputsContacto();
 });
-
+$(document).ready(function(){
+    $('.datepicker').datepicker({
+      format: 'yyyy-mm-dd',
+      autoClose: true
+    });
+  });
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+    $('.modal').modal();
+    $('.tap-target').tapTarget();
+    $('.datepicker').datepicker();
+  });
 document.addEventListener('DOMContentLoaded', function () {
-    const submitButton = document.getElementById('submitButton');
+    const submitButton = document.getElementById('submit_Button');
 
     submitButton.addEventListener('click', function () {
         procesarFormularioContacto();
     });
+
+    const submit_Button = document.getElementById('button');
+    submitButton.addEventListener('click', function () {
+        guardarYLimpiarFormulario();
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const submitButton = document.getElementById('button');
+    if (submitButton) {
+        submitButton.addEventListener('click', function () {
+            guardarYLimpiarFormulario();
+        });
+    }
 });
 // Validaciones 
 function validarCedula() {
@@ -88,6 +112,29 @@ function validarClave() {
     elementoClave.classList.remove('error'); // Elimina la clase 'error' si la clave es válida
     return true;
 }
+
+function validarFecha() {
+    const elementoFecha = document.getElementById('date'); // Selecciona el input de fecha
+    const fechaIngresada = new Date(elementoFecha.value); // Convierte el valor del input a un objeto Date
+    const fechaActual = new Date(); // Obtiene la fecha actual
+
+    // Calcula la fecha límite para ser mayor de 18 años
+    const fechaLimite = new Date(
+        fechaActual.getFullYear() - 18,
+        fechaActual.getMonth(),
+        fechaActual.getDate()
+    );
+
+    if (fechaIngresada > fechaLimite) {
+        alert('Debes ser mayor de 18 años para continuar.'); // Alerta para el usuario
+        elementoFecha.classList.add('error'); // Añade la clase 'error' al input
+        return false;
+    }
+
+    elementoFecha.classList.remove('error'); // Elimina la clase 'error' si la fecha es válida
+    return true;
+}
+
 // Función para guardar los valores de los inputs del card #contacto en localStorage
 function guardarInputsContacto() {
   $('#contacto input, #contacto textarea').on('blur', function () {

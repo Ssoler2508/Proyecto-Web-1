@@ -3,6 +3,7 @@
     --secondary-color: #936aba; /* Verde Materialize */
     --text-color: #333; /* Color de texto */
     --background-color: #f4f4f4; /* Color de fondo */
+    --second-background-color: #000; /* Color de fondo secundario */
     --font-color: #fff; /* Color de fuente */
 }
 body {
@@ -39,14 +40,14 @@ header ul {
     background-color: var(--primary-color); /* Color de fondo del encabezado */
 }
 li a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
 }
 .btnwaves-effectwaves-light{
-    background-color: black;
+    background-color: var(--second-background-color);
 }
 #button{
-    background-color: black;
+    background-color: var(--second-background-color);
 }
 .main-div{
     align-items: center;
@@ -63,11 +64,22 @@ li a:hover {
     flex-wrap: wrap; 
     gap: 5px; 
     margin-bottom: 20px;
-    border: 0.3rem solid var(--secondary-color);
+    border: 0.3rem solid var(--primary-color);
     box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 }
 
+.date_div {
+    margin-bottom: 20px;
+}
+
+.datepicker {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: var(--background-color);
+}
 
 .datepicker-modal {
     border-radius: 10px; /* Bordes redondeados */
@@ -76,77 +88,82 @@ li a:hover {
 }
 
 .datepicker-date-display {
-    background-color: #26a69a; /* Fondo verde */
-    color: #fff; /* Texto blanco */
-font-family: 'Arial', sans-serif; /* Fuente consistente */
+    background-color: var(--primary-color); /* Fondo verde */
+    color: var(--font-color); /* Texto blanco */
+    font-family: 'Arial', sans-serif; /* Fuente consistente */
     font-size: 1.5rem; /* Tamaño del texto */
     padding: 20px; /* Espaciado interno */
 }
 
 .datepicker-calendar {
-    background-color: #fff; /* Fondo blanco */
-    color: #000; /* Texto negro */
+    background-color: var(--background-color); /* Fondo blanco */
+    color: var(--text-color); /* Texto negro */
 }
 
 .datepicker-calendar .datepicker-day-button {
-    color: #000; /* Texto negro */
-    font-weight: bold; /* Texto en negrita */
+    color: var(--text-color); /* Texto negro */
 }
 
 .datepicker-calendar .is-selected {
-    background-color: #26a69a; /* Fondo verde para el día seleccionado */
-    color: #fff; /* Texto blanco */
+    background-color: var(--primary-color); /* Fondo verde para el día seleccionado */
+    color: var(--font-color); /* Texto blanco */
 }
 
 .datepicker-footer {
-    background-color: #f4f4f4; /* Fondo gris claro */
+    background-color: var(--background-color); /* Fondo gris claro */
     padding: 10px; /* Espaciado interno */
     text-align: right; /* Alineación del texto */
 }
 
 .datepicker-footer .btn-flat {
-    color: #26a69a; /* Botones en verde */
+    color: var(--primary-color); /* Botones en verde */
     font-weight: bold; /* Texto en negrita */
 }
-
 /* Estilo para los labels */
 .input-field {
     position: relative;
+margin-bottom: 10px; /* Espacio entre cada input */
 }
 
+/* Ajusta la posición inicial del label */
 .input-field label {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 1.1rem;
-    color: var(--secondary-color); /* Usa el color secundario */
+  margin-top: 10px;
+top: 25px; /* Posición inicial del label */
+    left: 10px; /* Espaciado horizontal */
+    font-size: 1.3rem; /* Tamaño inicial del texto */
+    color: var(--secondary-color); /* Color inicial del label */
     transition: all 0.3s ease; /* Transición suave */
     pointer-events: none; /* Evita que el label interfiera con el clic */
 }
 
+/* Mueve el label hacia arriba cuando el input está enfocado o tiene texto */
 .input-field input:focus + label,
 .input-field textarea:focus + label,
 .input-field input:not(:placeholder-shown) + label,
 .input-field textarea:not(:placeholder-shown) + label {
-    top: -20px; /* Mueve el label hacia arriba */
-    font-size: 0.8rem; /* Reduce el tamaño del label */
+    top: -5px; /* Mueve el label hacia arriba */
+    font-size: 0.85rem; /* Reduce el tamaño del texto */
     color: var(--primary-color); /* Cambia el color del label */
 }
 
-/* Estilo para los inputs */
+/* Ajusta el margen superior de los inputs para evitar que el label toque el input de arriba */
 .input-field input,
 .input-field textarea {
+margin-top: 20px; /* Espacio entre el input y el label */
     border: none;
     border-bottom: 1px solid var(--secondary-color); /* Línea inferior con color secundario */
     font-size: 1rem;
     color: var(--text-color); /* Texto oscuro */
     transition: border-color 0.3s ease; /* Transición suave */
+padding: 5px 10px; /* Espaciado interno del input */
 }
 
+/* Cambia el estilo del input cuando está enfocado */
 .input-field input:focus,
 .input-field textarea:focus {
-    border-bottom: 2px solid var(--primary-color); /* Línea inferior con color primario al hacer focus */
-    box-shadow: 0 1px 0 0 var(--primary-color); /* Sombra del borde */
+  border-bottom: 2px solid var(--primary-color); /* Línea inferior con color primario al hacer focus */
+    box-shadow: none; /* Elimina la sombra */
     outline: none;
 }
 

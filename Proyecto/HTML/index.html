@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../materialize/css/materialize.min.css">
-    <script href="../js/jquery-3.7.1.min.js"></script>
-    <script type="module" src="./js/materialize.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script src="../js/inde.js"></script>
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
     <header>        
@@ -60,13 +57,13 @@
                         <input id="phonelink_lock" type="password" class="validate" placeholder=" " required onblur="validarClave()">
                         <label for="phonelink_lock">Clave</label>
                     </div>
-                    <div class="date_div input-field col s6">
+                    <div class="input-field col s6">
                         <i class="material-icons prefix">event</i>
-                        <input id="fecha_nacimiento" type="text" name="date" class="validate datepicker date" placeholder=" " required>
-                        <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                        <input type="text" class="datepicker"name="date" id="date" placeholder=" " required onblur="validarFecha()">
+                        <label for="date">Fecha de Nacimiento</label>
                     </div>
                     <div class="button-container" >
-                        <button class="btn waves-effect waves-light" id="button" type="submit" name="action" onclick="guardarYLimpiarFormulario()">Ingresar
+                        <button class="btn waves-effect waves-light" id="button" type="submit" name="action">Ingresar
                             <i class="material-icons right">send</i>
                         </button>
                     </div>
@@ -77,6 +74,8 @@
     <footer>
         <p>&copy; 2025 Brayan agudelo - Santiago soler</p>
     </footer>
-    
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../js/inde.js"></script>
 </body>
 </html>
