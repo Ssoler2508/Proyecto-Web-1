@@ -128,10 +128,10 @@ margin-bottom: 10px; /* Espacio entre cada input */
 /* Ajusta la posición inicial del label */
 .input-field label {
     position: absolute;
-  margin-top: 10px;
-top: 25px; /* Posición inicial del label */
+    margin-top: 10px;
+    top: 25px; /* Posición inicial del label */
     left: 10px; /* Espaciado horizontal */
-    font-size: 1.3rem; /* Tamaño inicial del texto */
+    font-size: 1.5rem; /* Tamaño inicial del texto */
     color: var(--secondary-color); /* Color inicial del label */
     transition: all 0.3s ease; /* Transición suave */
     pointer-events: none; /* Evita que el label interfiera con el clic */
@@ -150,19 +150,19 @@ top: 25px; /* Posición inicial del label */
 /* Ajusta el margen superior de los inputs para evitar que el label toque el input de arriba */
 .input-field input,
 .input-field textarea {
-margin-top: 20px; /* Espacio entre el input y el label */
+    margin-top: 20px; /* Espacio entre el input y el label */
     border: none;
     border-bottom: 1px solid var(--secondary-color); /* Línea inferior con color secundario */
     font-size: 1rem;
     color: var(--text-color); /* Texto oscuro */
     transition: border-color 0.3s ease; /* Transición suave */
-padding: 5px 10px; /* Espaciado interno del input */
+    padding: 5px 10px; /* Espaciado interno del input */
 }
 
 /* Cambia el estilo del input cuando está enfocado */
 .input-field input:focus,
 .input-field textarea:focus {
-  border-bottom: 2px solid var(--primary-color); /* Línea inferior con color primario al hacer focus */
+    border-bottom: 2px solid var(--primary-color); /* Línea inferior con color primario al hacer focus */
     box-shadow: none; /* Elimina la sombra */
     outline: none;
 }
@@ -211,18 +211,18 @@ div.button-container {
 }
 footer {
     background-color: var(--primary-color);
-color: var(--font-color);
-position: relative;
-text-align: center;
-padding: 10px 0;
-margin-top: 20px;
+    color: var(--font-color);
+    position: relative;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
 footer p {
-margin: 0;
-font-size: 0.9rem;
-color: var(--font-color);
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--font-color);
 }
 .error{
-background-color: red;
+    background-color: red;
 }

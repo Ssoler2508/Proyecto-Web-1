@@ -130,9 +130,10 @@ img {
 
 .input-field label {
     position: absolute;
-    top: 10px;
+    margin-top: 10px;
+    top: 25px;
     left: 10px;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     color: var(--secondary-color); /* Usa el color secundario */
     transition: all 0.2s ease; /* Transición suave */
     pointer-events: none; /* Evita que el label interfiera con el clic */
@@ -142,9 +143,39 @@ img {
 .input-field textarea:focus + label,
 .input-field input:not(:placeholder-shown) + label,
 .input-field textarea:not(:placeholder-shown) + label {
-    top: -20px; /* Mueve el label hacia arriba */
+    top: -5px; /* Mueve el label hacia arriba */
     font-size: 0.8rem; /* Reduce el tamaño del label */
     color: var(--primary-color); /* Cambia el color del label */
+}
+.input-field input,
+.input-field textarea {
+    margin-top: 20px; /* Espacio entre el input y el label */
+    border: none;
+    border-bottom: 1px solid var(--secondary-color); /* Línea inferior con color secundario */
+    font-size: 1rem;
+    color: var(--text-color); /* Texto oscuro */
+    transition: border-color 0.3s ease; /* Transición suave */
+    padding: 5px 10px; /* Espaciado interno del input */
+}
+/* Cambia el estilo del input cuando está enfocado */
+.input-field input:focus,
+.input-field textarea:focus {
+    border-bottom: 2px solid var(--primary-color); /* Línea inferior con color primario al hacer focus */
+    box-shadow: none; /* Elimina la sombra */
+    outline: none;
+}
+/* Sobrescribe el estilo de los inputs válidos */
+input.valid,
+textarea.valid {
+    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
+    box-shadow: none; /* Elimina la sombra verde */
+}
+
+/* Sobrescribe el estilo de los inputs inválidos */
+input.invalid,
+textarea.invalid {
+    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
+    box-shadow: none; /* Elimina la sombra roja */
 }
 .button-container {
     display: flex; /* Activa Flexbox */
@@ -169,21 +200,6 @@ img {
     background-color: var(--secondary-color); /* Fondo lila claro al pasar el mouse */
     transform: scale(1.15); /* Aumenta ligeramente el tamaño */
 }
-
-/* Sobrescribe el estilo de los inputs válidos */
-input.valid,
-textarea.valid {
-    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
-    box-shadow: none; /* Elimina la sombra verde */
-}
-
-/* Sobrescribe el estilo de los inputs inválidos */
-input.invalid,
-textarea.invalid {
-    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
-    box-shadow: none; /* Elimina la sombra roja */
-}
-
 footer {
     background-color: var(--primary-color);
     color: var(--font-color);

@@ -1,16 +1,53 @@
-
-.cols12m7{
-    height: 520px;
-    width: 520px;
-    margin-left: 450px;
-    padding: 25px;
-    flex-wrap: wrap; 
-    gap: 5px; 
-    margin-bottom: 20px;
-    border-radius: 50px;
+:root{
+    --primary-color: #936aba; /* Azul Materialize */
+    --secondary-color: #936aba; /* Verde Materialize */
+    --text-color: #333; /* Color de texto */
+    --background-color: #f4f4f4; /* Color de fondo */
+    --second-background-color: #000; /* Color de fondo secundario */
+    --font-color: #fff; /* Color de fuente */
 }
 body{
-    background-color: black;
+    background-color: var(--background-color); /* Color de fondo */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
+    margin: 0; /* Elimina márgenes */
+}
+header {
+    color: var(--font-color);
+    /* padding: 10px 0; */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0; 
+    font-size: 1.5rem;
+    color: var(--font-color);
+}
+header h2 {
+    margin: 0; 
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+header ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0; 
+    padding: 0;
+}
+.nav-wrapper {
+    background-color: var(--primary-color); /* Color de fondo del encabezado */
+}
+li a:hover {
+    background-color: var(--primary-color);
+    color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
+}
+.btnwaves-effectwaves-light{
+    background-color: var(--second-background-color);
+}
+#button{
+    background-color: var(--second-background-color);
 }
 .card{
     width: 100%;
@@ -18,19 +55,28 @@ body{
     margin: 50px auto;  
     padding: 20px;
     box-shadow: 50px 50px 50px rgba(189, 42, 42, 0.1);
-    background-color: black;
+    background-color: var(--background-color);
 }
-.nav-wrapper{
-    background-color: black;
-}
+
 .card-action{
     padding: 1px;
     margin-left: 125px;
     justify-content: center;
 }
-h3{
-    color: w;
+main {
+    flex: 1; /* Hace que el main ocupe el espacio restante */
 }
-.nav-wrapper{
-    background-color: rgb(0, 0, 0);
+footer {
+    background-color: var(--primary-color); /* Fondo del footer */
+    color: var(--font-color); /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 15px 0; /* Espaciado interno */
+    width: 100%; /* Ocupa todo el ancho */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
+}
+
+footer p {
+    margin: 0; /* Elimina márgenes */
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: var(--font-color); /* Color del texto */
 }
