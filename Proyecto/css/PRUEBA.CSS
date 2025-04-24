@@ -133,13 +133,13 @@ main {
   background-color: var(--background-color);
 }
 .card {
-  width: 100%;
-  max-width: 600px;
-  padding: 20px;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
+    width: 100%;
+    max-width: 600px; 
+    padding: 20px;
+    background-color: var(--primary-color); 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
 }
 footer {
   background-color: var(--primary-color);
@@ -160,4 +160,9 @@ footer p {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+}
+.crucigrama-bg {
+    background-color: #070707; /* Morado más oscuro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados opcionales */
 }
