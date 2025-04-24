@@ -1,8 +1,7 @@
-// Inicializacion del nav header
 $(document).ready(function () {
     $('.sidenav').sidenav();
 
-    // Llama a la función para guardar los valores en localStorage
+// llama la funcion para guardar los valores en localStorage
     guardarInputsContacto();
 });
 $(document).ready(function(){
@@ -33,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById('button');
     if (submitButton) {
         submitButton.addEventListener('click', function (event) {
-            event.preventDefault(); // Evita el envío del formulario por defecto
-            guardarYLimpiarFormulario(); // Llama a la función
+            event.preventDefault();
+            guardarYLimpiarFormulario();
         });
     }
 });
@@ -56,71 +55,71 @@ function validarCedula() {
 }
 
 function validarNombre() {
-    const elementoNombre = document.getElementById('icon_nombre'); // Selecciona el input de nombre
-    const nombre = elementoNombre.value.trim(); // Obtiene el valor del input
-    const expReg = /^[a-zA-Z\s]+$/; // Expresión regular: solo letras y espacios
+    const elementoNombre = document.getElementById('icon_nombre'); 
+    const nombre = elementoNombre.value.trim(); 
+    const expReg = /^[a-zA-Z\s]+$/;
 
     if (nombre.length === 0 || !expReg.test(nombre)) {
         alert('Por favor, ingresa un nombre válido (solo letras y espacios).');
-        elementoNombre.classList.add('error'); // Añade la clase 'error' al input
+        elementoNombre.classList.add('error'); 
         return false;
     }
 
-    elementoNombre.classList.remove('error'); // Elimina la clase 'error' si el nombre es válido
+    elementoNombre.classList.remove('error');
     return true;
 }
 
 function validarApellido() {
-    const elementoApellido = document.getElementById('perm_identity'); // Selecciona el input de apellido
-    const apellido = elementoApellido.value.trim(); // Obtiene el valor del input
-    const expReg = /^[a-zA-Z0-9\s]+$/; // Expresión regular: permite letras, números y espacios
+    const elementoApellido = document.getElementById('perm_identity');
+    const apellido = elementoApellido.value.trim();
+    const expReg = /^[a-zA-Z0-9\s]+$/;
 
     if (apellido.length === 0 || !expReg.test(apellido)) {
         alert('Por favor, ingresa un apellido válido (solo letras, números y espacios).');
-        elementoApellido.classList.add('error'); // Añade la clase 'error' al input
+        elementoApellido.classList.add('error');
         return false;
     }
 
-    elementoApellido.classList.remove('error'); // Elimina la clase 'error' si el apellido es válido
+    elementoApellido.classList.remove('error');
     return true;
 }
 
 function validarEmail() {
-    const elementoEmail = document.getElementById('email'); // Selecciona el input de email
-    const email = elementoEmail.value.trim(); // Obtiene el valor del input
-    const expReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Expresión regular para validar correos
+    const elementoEmail = document.getElementById('email');
+    const email = elementoEmail.value.trim();
+    const expReg = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
     if (email.length === 0 || !expReg.test(email)) {
         alert('Por favor, ingresa un correo electrónico válido.');
-        elementoEmail.classList.add('error'); // Añade la clase 'error' al input
+        elementoEmail.classList.add('error');
         return false;
     }
 
-    elementoEmail.classList.remove('error'); // Elimina la clase 'error' si el correo es válido
+    elementoEmail.classList.remove('error'); 
     return true;
 }
 
 function validarClave() {
-    const elementoClave = document.getElementById('phonelink_lock'); // Selecciona el input de clave
-    const clave = elementoClave.value.trim(); // Obtiene el valor del input
-    const expReg = /^[0-9]{8,}$/; // Expresión regular: solo números, mínimo 8 caracteres
+    const elementoClave = document.getElementById('phonelink_lock'); 
+    const clave = elementoClave.value.trim();
+    const expReg = /^[0-9]{8,}$/;
 
     if (!expReg.test(clave)) {
         alert('Por favor, ingresa una clave válida (solo números, mínimo 8 caracteres).');
-        elementoClave.classList.add('error'); // Añade la clase 'error' al input
+        elementoClave.classList.add('error');
         return false;
     }
 
-    elementoClave.classList.remove('error'); // Elimina la clase 'error' si la clave es válida
+    elementoClave.classList.remove('error');
     return true;
 }
 
 function validarFecha() {
-    const elementoFecha = document.getElementById('date'); // Selecciona el input de fecha
-    const fechaIngresada = new Date(elementoFecha.value); // Convierte el valor del input a un objeto Date
-    const fechaActual = new Date(); // Obtiene la fecha actual
+    const elementoFecha = document.getElementById('date');
+    const fechaIngresada = new Date(elementoFecha.value);
+    const fechaActual = new Date();
 
-    // Calcula la fecha límite para ser mayor de 18 años
+
     const fechaLimite = new Date(
         fechaActual.getFullYear() - 18,
         fechaActual.getMonth(),
@@ -128,30 +127,30 @@ function validarFecha() {
     );
 
     if (fechaIngresada > fechaLimite) {
-        alert('Debes ser mayor de 18 años para continuar.'); // Alerta para el usuario
-        elementoFecha.classList.add('error'); // Añade la clase 'error' al input
+        alert('Debes ser mayor de 18 años para continuar.');
+        elementoFecha.classList.add('error');
         return false;
     }
 
-    elementoFecha.classList.remove('error'); // Elimina la clase 'error' si la fecha es válida
+    elementoFecha.classList.remove('error');
     return true;
 }
 
 // Función para guardar los valores de los inputs del card #contacto en localStorage
 function guardarInputsContacto() {
   $('#contacto input, #contacto textarea').on('blur', function () {
-      var inputId = $(this).attr('id'); // Obtiene el ID del input
-      var label = $(`label[for="${inputId}"]`).text(); // Obtiene el texto del label asociado
-      var value = $(this).val(); // Obtiene el valor del input
+      var inputId = $(this).attr('id'); 
+      var label = $(`label[for="${inputId}"]`).text();
+      var value = $(this).val();
 
       if (value.trim() !== '') {
-          localStorage.setItem(label, value); // Guarda en localStorage con el label como clave
+          localStorage.setItem(label, value);
       }
   });
 }
 
 function procesarFormularioContacto() {
-    // Obtén los valores de los inputs
+
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
     const message = document.getElementById('message').value.trim();
@@ -189,7 +188,7 @@ function procesarFormularioContacto() {
     alert('Formulario enviado correctamente.');
 }
 
-let formularioEnviado = false; // Variable para rastrear si el formulario fue enviado
+let formularioEnviado = false;
 
 function guardarYLimpiarFormulario() {
     const inputs = document.querySelectorAll('.form input');
@@ -211,20 +210,20 @@ function guardarYLimpiarFormulario() {
     }
 
     inputs.forEach(input => {
-        input.value = ''; // Limpia los campos
+        input.value = '';
     });
 
-    formularioEnviado = true; // Marca el formulario como enviado
+    formularioEnviado = true;
     alert('Formulario enviado correctamente.');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    const crucigramaLink = document.querySelector('a[href="../HTML/crucigrama.html"]'); // Selecciona el enlace del Crucigrama
+    const crucigramaLink = document.querySelector('a[href="../HTML/crucigrama.html"]');
 
     if (crucigramaLink) {
         crucigramaLink.addEventListener('click', function (event) {
             if (!formularioEnviado) {
-                event.preventDefault(); // Evita la redirección
+                event.preventDefault();
                 alert("Por favor, completa y envía el formulario antes de continuar.");
             }
         });

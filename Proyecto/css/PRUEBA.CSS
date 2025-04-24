@@ -1,11 +1,11 @@
-:root{
-  --primary-color: #936aba; /* Azul Materialize */
-  --secondary-color: #6a1b9a; /* Verde Materialize */
-  --third-color: #4a148c; /* Verde Materialize */
-  --text-color: #333; /* Color de texto */
-  --background-color: #f4f4f4; /* Color de fondo */
-  --second-background-color: #000; /* Color de fondo secundario */
-  --font-color: #fff; /* Color de fuente */
+:root {
+  --primary-color: #936aba;
+  --secondary-color: #6a1b9a;
+  --third-color: #4a148c;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --second-background-color: #000;
+  --font-color: #fff;
   --secondary-font-color: #936aba;
 }
 body {
@@ -16,17 +16,15 @@ body {
 }
 header {
   color: var(--font-color);
-  /* padding: 10px 0; */
   text-align: center;
 }
-
 header h1 {
-  margin: 0; 
+  margin: 0;
   font-size: 1.5rem;
   color: var(--font-color);
 }
 header h2 {
-  margin: 0; 
+  margin: 0;
   font-size: 2.5rem;
   color: var(--text-color);
 }
@@ -34,127 +32,114 @@ header ul {
   display: flex;
   gap: 15px;
   list-style: none;
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 .nav-wrapper {
-  background-color: var(--primary-color); /* Color de fondo del encabezado */
+  background-color: var(--primary-color);
 }
 li a:hover {
   background-color: var(--primary-color);
-  color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
+  color: var(--text-color);
 }
 h1 {
-    color: var(--text-color);
-    margin-bottom: 10px;
+  color: var(--text-color);
+  margin-bottom: 10px;
 }
-/* Estilo del grid */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(8, 50px); /* 8 columnas con un ancho de 50px cada una */
-    gap: 5px; /* Espaciado entre las celdas */
-    justify-content: center; /* Centra el grid horizontalmente */
-    margin: 20px auto; /* Espaciado superior e inferior y centrado horizontal */
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
 }
-
-/* Estilo de las celdas */
 .cell {
-    position: relative;
-    width: 50px;
-    height: 50px;
-     /* Fondo claro */
-    /* border: 1px solid var(--primary-color); */
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-/* Estilo de los inputs dentro de las celdas */
 .cell input {
-    width: 100%;
-    height: 100%;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    border: none;
-    text-align: center;
-    background: transparent;
-    outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: none;
+  text-align: center;
+  background: transparent;
+  outline: none;
 }
-
-/* Estilo de los números en las celdas */
 .cell .number {
-    position: absolute;
-    top: 2px;
-    left: 4px;
-    font-size: 0.8rem;
-    color: var(--primary-color); /* Color gris oscuro */
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  font-size: 0.8rem;
+  color: var(--primary-color);
 }
-
-/* Estilo para las celdas bloqueadas */
 .cell.block {
-    background-color: transparent; /* Color morado */
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 .clues {
-    display: flex;
-    gap: 40px;
-    text-align: left;
-    color: var(--text-color);
+  display: flex;
+  gap: 40px;
+  text-align: left;
+  color: var(--text-color);
 }
 .clues h3 {
-    color: var(--second-background-color);
-    margin-bottom: 5px;
+  color: var(--second-background-color);
+  margin-bottom: 5px;
 }
 .clues ul {
-    list-style: none;  
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 .clues li {
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: var(--text-color);
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--text-color);
 }
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background: var(--secondary-color);
-    color: var(--font-color);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: var(--secondary-color);
+  color: var(--font-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 button:hover {
-    background: var(--third-color);
+  background: var(--third-color);
 }
 .btn {
-   background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 .btn:hover {
-   background-color: var(--third-color);
+  background-color: var(--third-color);
 }
-.clues{
-    color: white;
+.clues {
+  color: white;
 }
-/* Centra la card en la página */
 main {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
-    padding: 20px; /* Espaciado interno */
-    background-color: var(--background-color); /* Fondo del main */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(--background-color);
 }
-/* Estilo de la card */
 .card {
-    width: 100%;
-    max-width: 600px; /* Ancho máximo de la card */
-    padding: 20px;
-    background-color: var(--background-color); /* Fondo blanco */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    text-align: center; /* Centra el contenido de la card */
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 footer {
   background-color: var(--primary-color);
@@ -169,7 +154,7 @@ footer p {
   font-size: 0.9rem;
   color: var(--font-color);
 }
-.mill{
+.mill {
   display: flex;
   justify-content: center;
   align-items: center;

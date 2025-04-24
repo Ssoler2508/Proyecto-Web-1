@@ -7,59 +7,59 @@ function verificar() {
         const solucion = input.dataset.solution;
 
         if (valor === solucion) {
-            input.style.backgroundColor = '#b2fab4'; // verde claro
+            input.style.backgroundColor = '#b2fab4';
             correcto++;
         } else {
-            input.style.backgroundColor = '#fab2b2'; // rojo claro
+            input.style.backgroundColor = '#fab2b2'; 
         }
     });
 
-    // Mostrar el alert después de validar todas las celdas
+    
     setTimeout(() => {
         if (correcto === inputs.length) {
             alert("¡Felicidades! Has completado el crucigrama.");
         }
-    }, 100); // Retraso breve para asegurar que los colores se actualicen antes del alert
+    }, 100);
 }
 
-// Agregar funcionalidad para moverse entre celdas con las flechas del teclado
+
 document.addEventListener('DOMContentLoaded', function () {
-    const cells = document.querySelectorAll('.cell input'); // Selecciona todos los inputs dentro de las celdas
-    const grid = document.querySelectorAll('.cell'); // Selecciona todas las celdas (incluyendo bloqueadas)
-    const gridColumns = 8; // Número de columnas en el grid
+    const cells = document.querySelectorAll('.cell input');
+    const grid = document.querySelectorAll('.cell');
+    const gridColumns = 8;
 
     function moveFocus(currentIndex, direction) {
         let nextIndex = currentIndex + direction;
 
-        // Asegúrate de que el índice esté dentro de los límites del grid
+        
         while (nextIndex >= 0 && nextIndex < grid.length) {
-            const nextCell = grid[nextIndex]; // Obtén la celda correspondiente
-            const input = nextCell.querySelector('input'); // Busca el input dentro de la celda
+            const nextCell = grid[nextIndex];
+            const input = nextCell.querySelector('input');
 
             if (input) {
-                input.focus(); // Mueve el foco al input válido
+                input.focus();
                 break;
             }
 
-            nextIndex += direction; // Continúa buscando en la dirección indicada
+            nextIndex += direction;
         }
     }
 
     cells.forEach((cell, index) => {
-        const parentIndex = Array.from(grid).indexOf(cell.parentElement); // Índice de la celda en el grid completo
+        const parentIndex = Array.from(grid).indexOf(cell.parentElement); 
 
         cell.addEventListener('keydown', (event) => {
             switch (event.key) {
-                case 'ArrowUp': // Mover hacia arriba
+                case 'ArrowUp': 
                     moveFocus(parentIndex, -gridColumns);
                     break;
-                case 'ArrowDown': // Mover hacia abajo
+                case 'ArrowDown': 
                     moveFocus(parentIndex, gridColumns);
                     break;
-                case 'ArrowLeft': // Mover hacia la izquierda
+                case 'ArrowLeft':
                     moveFocus(parentIndex, -1);
                     break;
-                case 'ArrowRight': // Mover hacia la derecha
+                case 'ArrowRight':
                     moveFocus(parentIndex, 1);
                     break;
                 default:

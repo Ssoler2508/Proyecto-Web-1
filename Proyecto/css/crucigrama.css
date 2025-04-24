@@ -1,31 +1,29 @@
-:root{
-    --primary-color: #936aba; /* Azul Materialize */
-    --secondary-color: #936aba; /* Verde Materialize */
-    --text-color: #333; /* Color de texto */
-    --background-color: #f4f4f4; /* Color de fondo */
-    --second-background-color: #000; /* Color de fondo secundario */
-    --font-color: #fff; /* Color de fuente */
+:root {
+    --primary-color: #936aba;
+    --secondary-color: #936aba;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --second-background-color: #000;
+    --font-color: #fff;
 }
-body{
-    background-color: var(--background-color); /* Color de fondo */
+body {
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Altura mínima igual a la altura de la ventana */
-    margin: 0; /* Elimina márgenes */
+    min-height: 100vh;
+    margin: 0;
 }
 header {
     color: var(--font-color);
-    /* padding: 10px 0; */
     text-align: center;
 }
-
 header h1 {
-    margin: 0; 
+    margin: 0;
     font-size: 1.5rem;
     color: var(--font-color);
 }
 header h2 {
-    margin: 0; 
+    margin: 0;
     font-size: 2.5rem;
     color: var(--text-color);
 }
@@ -33,20 +31,20 @@ header ul {
     display: flex;
     gap: 15px;
     list-style: none;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 .nav-wrapper {
-    background-color: var(--primary-color); /* Color de fondo del encabezado */
+    background-color: var(--primary-color);
 }
 li a:hover {
     background-color: var(--primary-color);
-    color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
+    color: var(--text-color);
 }
-.btnwaves-effectwaves-light{
+.btnwaves-effectwaves-light {
     background-color: var(--second-background-color);
 }
-#button{
+#button {
     background-color: var(--second-background-color);
 }
 .card {
@@ -54,38 +52,33 @@ li a:hover {
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: var(--primary-color); /* Fondo blanco */
-    color: #333333; /* Texto gris oscuro */
-    border-radius: 50px; /* Bordes redondeados */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border: 1px solid var(--primary-color); /* Borde con el color primario */
+    background-color: var(--primary-color);
+    color: #333333;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary-color);
 }
 .card-image {
-    width: 460px; /* Ajusta el tamaño según sea necesario */
-    height: 550px; /* Igual al ancho para que sea un círculo */
-    border-radius: 50px; /* Hace que la imagen sea redonda */
-    overflow: hidden; /* Asegura que el contenido no se desborde */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    border: 1px solid var(--primary-color); /* Borde con el color primario */
+    width: 460px;
+    height: 550px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-
-
-/* Opcional: Cambiar el color del botón dentro de la card */
 .card-action button {
-    background-color: #6a1b9a; /* Color morado oscuro del botón del formulario */
-    color: #fff; /* Texto blanco */
-    border-radius: 5px; /* Bordes redondeados */
-    transition: background-color 0.3s ease; /* Transición suave */
+    background-color: #6a1b9a;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-
 .card-action button:hover {
-    background-color: #4a148c; /* Color más oscuro al pasar el mouse */
+    background-color: #4a148c;
 }
-.card-action{
+.card-action {
     padding: 1px;
     margin-left: 125px;
     justify-content: center;
@@ -95,23 +88,22 @@ li a:hover {
     background-color: var(--primary-color);
 }
 main {
-    flex: 1; /* Hace que el main ocupe el espacio restante */
+    flex: 1;
 }
 footer {
-    background-color: var(--primary-color); /* Fondo del footer */
-    color: var(--font-color); /* Color del texto */
-    text-align: center; /* Centra el texto */
-    padding: 15px 0; /* Espaciado interno */
-    width: 100%; /* Ocupa todo el ancho */
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
 }
-
 footer p {
-    margin: 0; /* Elimina márgenes */
-    font-size: 0.9rem; /* Tamaño del texto */
-    color: var(--font-color); /* Color del texto */
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--font-color);
 }
-.card-content{
+.card-content {
     padding: 5px;
     margin: 0%;
     justify-content: center;

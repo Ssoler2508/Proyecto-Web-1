@@ -1,10 +1,10 @@
-:root{
-    --primary-color: #936aba; /* Azul Materialize */
-    --secondary-color: #936aba; /* Verde Materialize */
-    --text-color: #333; /* Color de texto */
-    --background-color: #f4f4f4; /* Color de fondo */
-    --second-background-color: #000; /* Color de fondo secundario */
-    --font-color: #fff; /* Color de fuente */
+:root {
+    --primary-color: #936aba;
+    --secondary-color: #936aba;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+    --second-background-color: #000;
+    --font-color: #fff;
 }
 body {
     font-family: Arial, sans-serif;
@@ -12,20 +12,17 @@ body {
     padding: 0;
     background-color: var(--background-color);
 }
-
 header {
     color: var(--font-color);
-    /* padding: 10px 0; */
     text-align: center;
 }
-
 header h1 {
-    margin: 0; 
+    margin: 0;
     font-size: 1.5rem;
     color: var(--font-color);
 }
 header h2 {
-    margin: 0; 
+    margin: 0;
     font-size: 2.5rem;
     color: var(--text-color);
 }
@@ -33,46 +30,43 @@ header ul {
     display: flex;
     gap: 15px;
     list-style: none;
-    margin: 0; 
+    margin: 0;
     padding: 0;
 }
 .nav-wrapper {
-    background-color: var(--primary-color); /* Color de fondo del encabezado */
+    background-color: var(--primary-color);
 }
 li a:hover {
     background-color: var(--primary-color);
-    color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
+    color: var(--text-color);
 }
-.btnwaves-effectwaves-light{
+.btnwaves-effectwaves-light {
     background-color: var(--second-background-color);
 }
-#button{
+#button {
     background-color: var(--second-background-color);
 }
-.main-div{
+.main-div {
     align-items: center;
 }
-.form{
+.form {
     width: 100%;
     max-width: 600px;
-    margin: 50px auto;  
-    /* padding: 20px; */
+    margin: 50px auto;
     border-radius: 20px;
 }
-.container{
+.container {
     padding: 10px;
-    flex-wrap: wrap; 
-    gap: 5px; 
+    flex-wrap: wrap;
+    gap: 5px;
     margin-bottom: 20px;
     border: 0.3rem solid var(--primary-color);
     box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
     border-radius: 50px;
 }
-
 .date_div {
     margin-bottom: 20px;
 }
-
 .datepicker {
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -80,134 +74,110 @@ li a:hover {
     font-size: 16px;
     background-color: var(--background-color);
 }
-
 .datepicker-modal {
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
 .datepicker-date-display {
-    background-color: var(--primary-color); /* Fondo verde */
-    color: var(--font-color); /* Texto blanco */
-    font-family: 'Arial', sans-serif; /* Fuente consistente */
-    font-size: 1.5rem; /* Tamaño del texto */
-    padding: 20px; /* Espaciado interno */
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    padding: 20px;
 }
-
 .datepicker-calendar {
-    background-color: var(--background-color); /* Fondo blanco */
-    color: var(--text-color); /* Texto negro */
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
-
 .datepicker-calendar .datepicker-day-button {
-    color: var(--text-color); /* Texto negro */
+    color: var(--text-color);
 }
-
 .datepicker-calendar .is-selected {
-    background-color: var(--primary-color); /* Fondo verde para el día seleccionado */
-    color: var(--font-color); /* Texto blanco */
+    background-color: var(--primary-color);
+    color: var(--font-color);
 }
-
 .datepicker-footer {
-    background-color: var(--background-color); /* Fondo gris claro */
-    padding: 10px; /* Espaciado interno */
-    text-align: right; /* Alineación del texto */
+    background-color: var(--background-color);
+    padding: 10px;
+    text-align: right;
 }
-
 .datepicker-footer .btn-flat {
-    color: var(--primary-color); /* Botones en verde */
-    font-weight: bold; /* Texto en negrita */
+    color: var(--primary-color);
+    font-weight: bold;
 }
-/* Estilo para los labels */
 .input-field {
     position: relative;
-margin-bottom: 10px; /* Espacio entre cada input */
+    margin-bottom: 10px;
 }
-
-/* Ajusta la posición inicial del label */
 .input-field label {
     position: absolute;
     margin-top: 10px;
-    top: 25px; /* Posición inicial del label */
-    left: 10px; /* Espaciado horizontal */
-    font-size: 1.5rem; /* Tamaño inicial del texto */
-    color: var(--secondary-color); /* Color inicial del label */
-    transition: all 0.3s ease; /* Transición suave */
-    pointer-events: none; /* Evita que el label interfiera con el clic */
+    top: 25px;
+    left: 10px;
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
-
-/* Mueve el label hacia arriba cuando el input está enfocado o tiene texto */
 .input-field input:focus + label,
 .input-field textarea:focus + label,
 .input-field input:not(:placeholder-shown) + label,
 .input-field textarea:not(:placeholder-shown) + label {
-    top: -5px; /* Mueve el label hacia arriba */
-    font-size: 0.85rem; /* Reduce el tamaño del texto */
-    color: var(--primary-color); /* Cambia el color del label */
+    top: -5px;
+    font-size: 0.85rem;
+    color: var(--primary-color);
 }
-
-/* Ajusta el margen superior de los inputs para evitar que el label toque el input de arriba */
 .input-field input,
 .input-field textarea {
-    margin-top: 20px; /* Espacio entre el input y el label */
+    margin-top: 20px;
     border: none;
-    border-bottom: 1px solid var(--secondary-color); /* Línea inferior con color secundario */
+    border-bottom: 1px solid var(--secondary-color);
     font-size: 1rem;
-    color: var(--text-color); /* Texto oscuro */
-    transition: border-color 0.3s ease; /* Transición suave */
-    padding: 5px 10px; /* Espaciado interno del input */
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+    padding: 5px 10px;
 }
-
-/* Cambia el estilo del input cuando está enfocado */
 .input-field input:focus,
 .input-field textarea:focus {
-    border-bottom: 2px solid var(--primary-color); /* Línea inferior con color primario al hacer focus */
-    box-shadow: none; /* Elimina la sombra */
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: none;
     outline: none;
 }
-
-/* Sobrescribe el estilo de los inputs válidos */
 input.valid,
 textarea.valid {
-    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
-    box-shadow: none; /* Elimina la sombra verde */
+    border-bottom: 1px solid var(--secondary-color);
+    box-shadow: none;
 }
-
-/* Sobrescribe el estilo de los inputs inválidos */
 input.invalid,
 textarea.invalid {
-    border-bottom: 1px solid var(--secondary-color); /* Cambia el color del borde */
-    box-shadow: none; /* Elimina la sombra roja */
+    border-bottom: 1px solid var(--secondary-color);
+    box-shadow: none;
 }
-
-/* Íconos */
 .input-field .prefix {
-    color: #5c5c5c; /* Gris claro */
+    color: #5c5c5c;
 }
-/* Estilo para el botón del formulario */
 div.button-container {
-    display: flex; /* Activa Flexbox */
-    justify-content: center; /* Centra horizontalmente el botón */
-    margin-top: 20px; /* Espacio superior */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 #button {
-    border-radius: 20px; /* Bordes redondeados */
-    background-color: var(--primary-color); /* Fondo morado oscuro */
-    color: var(--font-color); /* Texto blanco */
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: var(--font-color);
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    display: flex; /* Activa Flexbox */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    text-align: center; /* Asegura que el texto esté centrado */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-
 #button:hover {
-    background-color: var(--secondary-color); /* Fondo lila claro al pasar el mouse */
-    transform: scale(1.15); /* Aumenta ligeramente el tamaño */
+    background-color: var(--secondary-color);
+    transform: scale(1.15);
 }
 footer {
     background-color: var(--primary-color);
@@ -217,12 +187,11 @@ footer {
     padding: 10px 0;
     margin-top: 20px;
 }
-
 footer p {
     margin: 0;
     font-size: 0.9rem;
     color: var(--font-color);
 }
-.error{
+.error {
     background-color: red;
 }
