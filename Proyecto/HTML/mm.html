@@ -3,114 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script type= "text/javascript" src="../js/materialize.js"></script>
-    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="../materialize/css/materialize.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script type="text/javascript" src="./js/materialize.min.js"></script>
+    <link rel="stylesheet" href="../materialize/css/materialize.min.css">
     <link rel="stylesheet" href="../css/PRUEBA.CSS">
-    <script type="text/javascript" src="../js/prueba.js"></script>
-
-    <title>Document</title>
+    <title>Juego Crucigrama</title>
 </head>
 <body>
-    <h1>CRUCIGRAMA</h1>
-
-    <div class="grid" id="crucigrama">
-      <!-- Fila 1 -->
-      <div class="cell"><span class="number">3</span><input maxlength="1" data-solution="A"></div>
-      <div class="cell"><input maxlength="1" data-solution="A"></div>
-      <div class="cell"><input maxlength="1" data-solution="Z"></div>
-      <div class="cell"><input maxlength="1" data-solution="A"></div>
-      <div class="cell blue"></div>
-      <div class="cell"><input maxlength="1" data-solution="A"></div>
-      <div class="cell"><input maxlength="1" data-solution="K"></div>
-  
-      <!-- Fila 2 -->
-      <div class="cell blue"></div>
-      <div class="cell"><input maxlength="1" data-solution="R"></div>
-      <div class="cell"><input maxlength="1" data-solution="E"></div>
-      <div class="cell"><input maxlength="1" data-solution="R"></div>
-      <div class="cell"><input maxlength="1" data-solution="A"></div>
-      <div class="cell"><input maxlength="1" data-solution="L"></div>
-      <div class="cell"><input maxlength="1" data-solution="M"></div>
-  
-      <!-- Fila 3 -->
-      <div class="cell"><span class="number">3</span><input maxlength="1" data-solution="V"></div>
-      <div class="cell"><input maxlength="1" data-solution="V"></div>
-      <div class="cell"><input maxlength="1" data-solution="A"></div>
-      <div class="cell"><input maxlength="1" data-solution="A"></div>
-      <div class="cell blue"></div>
-      <div class="cell"><span class="number">9</span><input maxlength="1" data-solution="U"></div>
-      <div class="cell"><input maxlength="1" data-solution="V"></div>
-  
-      <!-- Fila 4 -->
-      <div class="cell"><input maxlength="1" data-solution="U"></div>
-      <div class="cell"><input maxlength="1" data-solution="S"></div>
-      <div class="cell"><input maxlength="1" data-solution="I"></div>
-      <div class="cell"><input maxlength="1" data-solution="W"></div>
-      <div class="cell"><input maxlength="1" data-solution="U"></div>
-      <div class="cell"><input maxlength="1" data-solution="V"></div>
-      <div class="cell blue"></div>
-  
-      <!-- Fila 5 -->
-      <div class="cell"><span class="number">5</span><input maxlength="1" data-solution="U"></div>
-      <div class="cell"><input maxlength="1" data-solution="F"></div>
-      <div class="cell blue"><input maxlength="1" data-solution="G"></div>
-      <div class="cell"><input maxlength="1" data-solution="S"></div>
-      <div class="cell"><input maxlength="1" data-solution="S"></div>
-      <div class="cell"><input maxlength="1" data-solution="V"></div>
-      <div class="cell"><input maxlength="1" data-solution="V"></div>
-
-      <!-- fila 6 -->
-      <div class="cell"><input maxlength="1" data-solution="U"></div>
-      <div class="cell"><input maxlength="1" data-solution="S"></div>
-      <div class="cell"><input maxlength="1" data-solution="I"></div>
-      <div class="cell"><input maxlength="1" data-solution="W"></div> 
-      <div class="cell"><input maxlength="1" data-solution="I"></div>
-      <div class="cell"><input maxlength="1" data-solution="V"></div>
-      <div class="cell"><input maxlength="1" data-solution="W"></div>
-
-      <!-- fila 7 -->
-      <div class="cell"><span class="number">7</span><input maxlength="1" data-solution="U"></div>
-      <div class="cell blue"></div>
-      <div class="cell"><input maxlength="1" data-solution="S"></div>
-      <div class="cell blue"></div>
-      <div class="cell"><input maxlength="1" data-solution="I"></div>
-      <div class="cell"><input maxlength="1" data-solution="W"></div> 
-      <div class="cell"><input maxlength="1" data-solution="I"></div>
-
-      <!-- fila 8 -->
-      <div class="cell"><span class="number">8</span><input maxlength="1" data-solution="U"></div>
-      <div class="cell"><input maxlength="1" data-solution="B"></div>
-      <div class="cell"><input maxlength="1" data-solution="R"></div> 
-      <div class="cell"><input maxlength="1" data-solution="I"></div>
-      <div class="cell"><input maxlength="1" data-solution="W"></div>
-      <div class="cell"><span class="number">10</span><input maxlength="1" data-solution="U"></div>
-      <div class="cell blue"></div>
-
-
-    </div>
-    <button onclick="verificar()">Verificar</button>
-    
-  
-    <div class="clues">
-      <div>
-        <h3>Horizontales</h3>
-        <ol>
-          <li><strong>1:</strong> ciudad</li>
-          <li><strong>2:</strong> fruta verde</li>
-          <li><strong>3:</strong> el oceano mas grande</li>
-        </ol>
-      </div>
-      <div>
-        <h3>Verticales</h3>
-        <ol>
-          <li><strong>1:</strong> el material mas resistente</li>
-          <li><strong>3:</strong> la bola mas grande del mundo</li>
-        </ol>
-      </div>
-    </div>
+    <header>        
+        <nav>
+            <div class="nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+                <h1>Sitio de Revistas</h1>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../HTML/crucigrama.html" target="_blank">Crucigrama</a></li>
+                    <li><a href="../HTML/inicio.html#revistas" target="_blank">Revistas</a></li>
+                    <li><a href="../HTML/inicio.html#contacto" target="_blank">Contacto</a></li>
+                    <li><a href="../HTML/index.html" target="_blank">Ingresar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="card purple lighten-5 z-depth-3">
+            <div class="card-content">
+                <h1 class="center-align">CRUCIGRAMA</h1>
+                <div class="grid" id="crucigrama">
+                    <!-- Fila 1 -->
+                    <div class="cell"><span class="number">3</span><input maxlength="1" data-solution="A"></div>
+                    <div class="cell"><input maxlength="1" data-solution="A"></div>
+                    <div class="cell"><input maxlength="1" data-solution="Z"></div>
+                    <div class="cell"><input maxlength="1" data-solution="A"></div>
+                    <div class="cell block"></div>
+                    <div class="cell"><input maxlength="1" data-solution="A"></div>
+                    <div class="cell"><input maxlength="1" data-solution="K"></div>
+                    <!-- Fila 2 -->
+                    <div class="cell block"></div>
+                    <div class="cell"><input maxlength="1" data-solution="R"></div>
+                    <div class="cell"><input maxlength="1" data-solution="E"></div>
+                    <div class="cell"><input maxlength="1" data-solution="R"></div>
+                    <div class="cell"><input maxlength="1" data-solution="A"></div>
+                    <div class="cell"><input maxlength="1" data-solution="L"></div>
+                    <div class="cell"><input maxlength="1" data-solution="M"></div>
+                    <!-- Fila 3 -->
+                    <div class="cell"><span class="number">3</span><input maxlength="1" data-solution="V"></div>
+                    <div class="cell"><input maxlength="1" data-solution="V"></div>
+                    <div class="cell"><input maxlength="1" data-solution="A"></div>
+                    <div class="cell"><input maxlength="1" data-solution="A"></div>
+                    <div class="cell block"></div>
+                    <div class="cell"><span class="number">9</span><input maxlength="1" data-solution="U"></div>
+                    <div class="cell"><input maxlength="1" data-solution="V"></div>
+                    <!-- Fila 4 -->
+                    <div class="cell"><input maxlength="1" data-solution="U"></div>
+                    <div class="cell"><input maxlength="1" data-solution="S"></div>
+                    <div class="cell"><input maxlength="1" data-solution="I"></div>
+                    <div class="cell"><input maxlength="1" data-solution="W"></div>
+                    <div class="cell"><input maxlength="1" data-solution="U"></div>
+                    <div class="cell"><input maxlength="1" data-solution="V"></div>
+                    <div class="cell block"></div>
+                    <!-- Fila 5 -->
+                    <div class="cell"><span class="number">5</span><input maxlength="1" data-solution="U"></div>
+                    <div class="cell"><input maxlength="1" data-solution="F"></div>
+                    <div class="cell block"><input maxlength="1" data-solution="G"></div>
+                    <div class="cell"><input maxlength="1" data-solution="S"></div>
+                    <div class="cell"><input maxlength="1" data-solution="S"></div>
+                    <div class="cell"><input maxlength="1" data-solution="V"></div>
+                    <div class="cell"><input maxlength="1" data-solution="V"></div>
+                    <!-- fila 6 -->
+                    <div class="cell"><input maxlength="1" data-solution="U"></div>
+                    <div class="cell"><input maxlength="1" data-solution="S"></div>
+                    <div class="cell"><input maxlength="1" data-solution="I"></div>
+                    <div class="cell"><input maxlength="1" data-solution="W"></div> 
+                    <div class="cell"><input maxlength="1" data-solution="I"></div>
+                    <div class="cell"><input maxlength="1" data-solution="V"></div>
+                    <div class="cell"><input maxlength="1" data-solution="W"></div>
+                    <!-- fila 7 -->
+                    <div class="cell"><span class="number">7</span><input maxlength="1" data-solution="U"></div>
+                    <div class="cell block"></div>
+                    <div class="cell"><input maxlength="1" data-solution="S"></div>
+                    <div class="cell block"></div>
+                    <div class="cell"><input maxlength="1" data-solution="I"></div>
+                    <div class="cell"><input maxlength="1" data-solution="W"></div> 
+                    <div class="cell"><input maxlength="1" data-solution="I"></div>
+                    <!-- fila 8 -->
+                    <div class="cell"><span class="number">8</span><input maxlength="1" data-solution="U"></div>
+                    <div class="cell"><input maxlength="1" data-solution="B"></div>
+                    <div class="cell"><input maxlength="1" data-solution="R"></div> 
+                    <div class="cell"><input maxlength="1" data-solution="I"></div>
+                    <div class="cell"><input maxlength="1" data-solution="W"></div>
+                    <div class="cell"><span class="number">10</span><input maxlength="1" data-solution="U"></div>
+                    <div class="cell block"></div>
+                </div>
+                <button class="btn waves-effect waves-light center-align" onclick="verificar()">Verificar</button>
+            </div>
+            <div class="card-action">
+                <div class="clues">
+                    <div>
+                        <h3>Horizontales</h3>
+                        <ol>
+                            <li><strong>1:</strong> ciudad</li>
+                            <li><strong>2:</strong> fruta verde</li>
+                            <li><strong>3:</strong> el océano más grande</li>
+                        </ol>
+                    </div>
+                    <div>
+                        <h3>Verticales</h3>
+                        <ol>
+                            <li><strong>1:</strong> el material más resistente</li>
+                            <li><strong>3:</strong> la bola más grande del mundo</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Brayan Agudelo - Santiago Soler</p>
+    </footer>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
+    <script src="../js/prueba.js"></script>
 </body>
 </html>
