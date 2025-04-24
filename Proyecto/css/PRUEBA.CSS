@@ -1,34 +1,69 @@
+:root{
+  --primary-color: #936aba; /* Azul Materialize */
+  --text-color: #333; /* Color de texto */
+  --background-color: #f4f4f4; /* Color de fondo */
+  --second-background-color: #000; /* Color de fondo secundario */
+  --font-color: #fff; /* Color de fuente */
+  --secondary-font-color: #936aba;
+}
 body {
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-    background: #f0f0f0;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+header {
+  color: var(--font-color);
+  /* padding: 10px 0; */
+  text-align: center;
+}
 
-  h1 {
+header h1 {
+  margin: 0; 
+  font-size: 1.5rem;
+  color: var(--font-color);
+}
+header h2 {
+  margin: 0; 
+  font-size: 2.5rem;
+  color: var(--text-color);
+}
+header ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0; 
+  padding: 0;
+}
+.nav-wrapper {
+  background-color: var(--primary-color); /* Color de fondo del encabezado */
+}
+li a:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color); /* Color de fondo del encabezado al pasar el mouse */
+}
+h1 {
     color: #333;
     margin-bottom: 10px;
-  }
-
-  .grid {
+}
+.grid {
     display: grid;
     grid-template-columns: repeat(7, 50px);
     gap: 4px;
-    margin: 20px 0;
-  }
-
-  .cell {
+    margin: 20px 50px;
+}
+.block{
+    background-color: var(--primary-color);
+}
+.cell {
     position: relative;
     width: 50px;
     height: 50px;
-    background: white;
-    border: 2px solid #ffffff;
+    background: purple lighten-5 z-depth-3;
+    border: 2px solid var(--primary-color);
     text-align: center;
-  }
-
-  .cell input {
+}
+.cell input {
     width: 100%;
     height: 100%;
     font-size: 20px;
@@ -36,31 +71,23 @@ body {
     border: none;
     text-align: center;
     background: transparent;
-  }
-
-  .cell.black {
-    background: #ffffff;
-    border: none;
-  }
-
-  .cell .number {
+}
+.cell .number {
     position: absolute;
     top: 2px;
     left: 4px;
     font-size: 10px;
-    color: #ffefef;
-  }
-
-  .clues {
+    color: var(--secondary-font-color);
+}
+.clues {
     display: flex;
     gap: 40px;
     text-align: left;
-  }
-
-  .clues h3 {
+}
+.clues h3 {
     margin-bottom: 5px;
-  }
-  button {
+}
+button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
@@ -69,14 +96,42 @@ body {
     border: none;
     border-radius: 8px;
     cursor: pointer;
-  }
-
-  button:hover {
+}
+button:hover {
     background: #45a049;
-  }
-  .clues{
+}
+.clues{
     color: white;
-  }
-  body{
-    background-color: black;
-  }
+}
+/* Centra la card en la página */
+main {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    padding: 20px; /* Espaciado interno */
+    background-color: var(--background-color); /* Fondo del main */
+}
+/* Estilo de la card */
+.card {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo de la card */
+    padding: 20px;
+    background-color: var(--background-color); /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    text-align: center; /* Centra el contenido de la card */
+}
+footer {
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0px;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--font-color);
+}
