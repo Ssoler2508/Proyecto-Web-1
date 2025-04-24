@@ -32,11 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
     const submitButton = document.getElementById('button');
     if (submitButton) {
-        submitButton.addEventListener('click', function () {
-            guardarYLimpiarFormulario();
+        submitButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita el envío del formulario por defecto
+            guardarYLimpiarFormulario(); // Llama a la función
         });
     }
 });
+
 // Validaciones 
 function validarCedula() {
     const elementoCedula = document.getElementById('icon_prefix');
@@ -187,22 +189,44 @@ function procesarFormularioContacto() {
     alert('Formulario enviado correctamente.');
 }
 
+let formularioEnviado = false; // Variable para rastrear si el formulario fue enviado
+
 function guardarYLimpiarFormulario() {
-    // Selecciona todos los inputs y textareas del formulario
-    const inputs = document.querySelectorAll('.form input, .form textarea');
+    const inputs = document.querySelectorAll('.form input');
+    let isValid = true;
 
-    // Recorre cada input/textarea
     inputs.forEach(input => {
-        const label = document.querySelector(`label[for="${input.id}"]`).textContent; // Obtiene el texto del label asociado
-        const value = input.value.trim(); // Obtiene el valor del input
-
-        if (value !== '') {
-            localStorage.setItem(label, value); // Guarda en localStorage con el label como clave
+        const value = input.value.trim();
+        if (value === '') {
+            input.classList.add('input-error');
+            isValid = false;
+        } else {
+            input.classList.remove('input-error');
         }
-
-        input.value = ''; // Limpia el valor del input
     });
 
-    // Confirmación
-    alert('Formulario enviado y datos guardados correctamente.');
+    if (!isValid) {
+        alert("Por favor, completa todos los campos.");
+        return;
+    }
+
+    inputs.forEach(input => {
+        input.value = ''; // Limpia los campos
+    });
+
+    formularioEnviado = true; // Marca el formulario como enviado
+    alert('Formulario enviado correctamente.');
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const crucigramaLink = document.querySelector('a[href="../HTML/crucigrama.html"]'); // Selecciona el enlace del Crucigrama
+
+    if (crucigramaLink) {
+        crucigramaLink.addEventListener('click', function (event) {
+            if (!formularioEnviado) {
+                event.preventDefault(); // Evita la redirección
+                alert("Por favor, completa y envía el formulario antes de continuar.");
+            }
+        });
+    }
+});
