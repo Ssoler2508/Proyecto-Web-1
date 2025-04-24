@@ -1,5 +1,7 @@
 :root{
   --primary-color: #936aba; /* Azul Materialize */
+  --secondary-color: #6a1b9a; /* Verde Materialize */
+  --third-color: #4a148c; /* Verde Materialize */
   --text-color: #333; /* Color de texto */
   --background-color: #f4f4f4; /* Color de fondo */
   --second-background-color: #000; /* Color de fondo secundario */
@@ -91,14 +93,20 @@ button {
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background: #4CAF50;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--font-color);
     border: none;
     border-radius: 8px;
     cursor: pointer;
 }
 button:hover {
-    background: #45a049;
+    background: var(--third-color);
+}
+.btn {
+   background-color: var(--secondary-color);
+}
+.btn:hover {
+   background-color: var(--third-color);
 }
 .clues{
     color: white;
