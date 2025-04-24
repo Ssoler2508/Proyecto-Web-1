@@ -54,28 +54,45 @@ li a:hover {
     max-width: 500px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #ffffff; /* Fondo blanco */
+    background-color: var(--primary-color); /* Fondo blanco */
     color: #333333; /* Texto gris oscuro */
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 50px; /* Bordes redondeados */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     border: 1px solid var(--primary-color); /* Borde con el color primario */
 }
+.card-image {
+    width: 460px; /* Ajusta el tamaño según sea necesario */
+    height: 550px; /* Igual al ancho para que sea un círculo */
+    border-radius: 50px; /* Hace que la imagen sea redonda */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border: 1px solid var(--primary-color); /* Borde con el color primario */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 
 /* Opcional: Cambiar el color del botón dentro de la card */
 .card-action button {
-    background-color: var(--primary-color); /* Fondo del botón */
-    color: var(--font-color); /* Texto blanco */
+    background-color: #6a1b9a; /* Color morado oscuro del botón del formulario */
+    color: #fff; /* Texto blanco */
     border-radius: 5px; /* Bordes redondeados */
     transition: background-color 0.3s ease; /* Transición suave */
 }
 
 .card-action button:hover {
-    background-color: var(--secondary-color); /* Fondo al pasar el mouse */
+    background-color: #4a148c; /* Color más oscuro al pasar el mouse */
 }
 .card-action{
     padding: 1px;
     margin-left: 125px;
     justify-content: center;
+    border: none;
+    margin: 0%;
+    display: flex;
+    background-color: var(--primary-color);
 }
 main {
     flex: 1; /* Hace que el main ocupe el espacio restante */
@@ -93,4 +110,13 @@ footer p {
     margin: 0; /* Elimina márgenes */
     font-size: 0.9rem; /* Tamaño del texto */
     color: var(--font-color); /* Color del texto */
+}
+.card-content{
+    padding: 5px;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    color: #f4f4f4;
 }
