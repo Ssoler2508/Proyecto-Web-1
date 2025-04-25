@@ -151,7 +151,7 @@ main {
     width: 100%;
     max-width: 600px; /* Ancho máximo de la card */
     padding: 20px;
-    background-color: var(--background-color); /* Fondo blanco */
+    background-color: var(--primary-color); /* Fondo blanco */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     text-align: center; /* Centra el contenido de la card */
@@ -175,4 +175,9 @@ footer p {
   align-items: center;
   gap: 10px;
   margin-top: 20px;
+}
+.crucigrama-bg {
+    background-color: #070707; /* Morado más oscuro */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados opcionales */
 }
