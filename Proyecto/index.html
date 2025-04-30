@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./materialize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>        
+        <nav>
+            <div class="nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; padding: 0 20px;">
+                <h1>Sitio de Revistas</h1>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="./crucigrama.html">Crucigrama</a></li>
+                    <li><a href="./inicio.html#revistas" target="_blank">Revistas</a></li>
+                    <li><a href="./inicio.html#contacto" target="_blank">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="main-div" >
+            <div class="form" >
+                <div class="container purple lighten-5 z-depth-3">
+                    <h2 class="center-align purple-text text-darken-3">Registro</h2>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_box</i>
+                        <input id="icon_prefix" type="text" class="validate" placeholder=" " required onblur="validarCedula()">
+                        <label for="icon_prefix">Cedula</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">person</i>
+                        <input id="icon_nombre" type="text" class="validate" placeholder=" " required onblur="validarNombre()">
+                        <label for="icon_nombre">Nombre</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">perm_identity</i>
+                        <input id="perm_identity" type="text" class="validate" placeholder=" " required onblur="validarApellido()">
+                        <label for="perm_identity">Apellido</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" type="text" class="validate" placeholder=" " required onblur="validarEmail()">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">accessibility</i>
+                        <input id="accessibility" type="text" class="validate" placeholder=" " required>
+                        <label for="accessibility">Nombre de Usuario</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">phonelink_lock</i>
+                        <input id="phonelink_lock" type="password" class="validate" placeholder=" " required onblur="validarClave()">
+                        <label for="phonelink_lock">Clave</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">event</i>
+                        <input type="text" class="datepicker"name="date" id="date" placeholder=" " required onblur="validarFecha()">
+                        <label for="date">Fecha de Nacimiento</label>
+                    </div>
+                    <div class="button-container" >
+                        <button class="btn waves-effect waves-light" id="button" type="submit" name="action">Enviar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+               </div>   
+            </div>   
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Brayan agudelo - Santiago soler</p>
+    </footer>
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./materialize.min.js"></script>
+    <script src="./inde.js"></script>
+</body>
+</html>
