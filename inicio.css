@@ -196,3 +196,8 @@ footer p {
     margin: 0;
     font-size: 0.9rem;
 }
+
+.sidenav {
+    display: block !important; /* Asegúrate de que el menú sea visible */
+    transform: translateX(0) !important; /* Asegúrate de que no esté fuera de la pantalla */
+}
