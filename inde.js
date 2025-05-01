@@ -38,6 +38,11 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const sidenav = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sidenav);
+});
+
 // Validaciones 
 function validarCedula() {
     const elementoCedula = document.getElementById('icon_prefix');
