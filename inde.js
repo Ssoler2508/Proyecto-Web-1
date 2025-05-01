@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     const sidenav = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(sidenav);
+    M.Sidenav.init(sidenav); // Inicializa el menú lateral
 });
 
 // Validaciones 
